@@ -14,13 +14,13 @@
 <xs:element name="Breed" type="eCH-0261:enumeratedItemType"><xs:annotation><xs:documentation xml:lang="de">Rasse</xs:documentation></xs:annotation></xs:element>
 <xs:element name="BirthDate" type="xs:dateTime"><xs:annotation><xs:documentation xml:lang="de">Geburtsdatum</xs:documentation></xs:annotation></xs:element>
 <xs:element name="BirthWeight" type="xs:decimal"><xs:annotation><xs:documentation xml:lang="de">Geburtsgewicht in kg</xs:documentation></xs:annotation></xs:element>
-<xs:element name="nan" type="xs:string"><xs:annotation><xs:documentation xml:lang="de">nan</xs:documentation></xs:annotation></xs:element>
+<xs:element name="BirthNotificationData" type="xs:string"><xs:annotation><xs:documentation xml:lang="de">unbekannt</xs:documentation></xs:annotation></xs:element>
 <xs:element name="PlaceOfBirth" type="xs:string"><xs:annotation><xs:documentation xml:lang="de">Geburtsort</xs:documentation></xs:annotation></xs:element>
 <xs:element name="weight" type="xs:decimal"><xs:annotation><xs:documentation xml:lang="de">Gewichtsmessung in Kg</xs:documentation></xs:annotation></xs:element>
 <xs:element name="DeathTime" type="xs:dateTime"><xs:annotation><xs:documentation xml:lang="de">Zeitpunkt des Todes</xs:documentation></xs:annotation></xs:element>
 <xs:element name="SportBreedingName" type="xs:string"><xs:annotation><xs:documentation xml:lang="de">Sport- oder Zuchtname</xs:documentation></xs:annotation></xs:element>
 <xs:element name="sex" type="eCH-0261:enumeratedItemType"><xs:annotation><xs:documentation xml:lang="de">Geschlecht</xs:documentation></xs:annotation></xs:element>
-<xs:element name="IsCastrated" type="xs:boolean"><xs:annotation><xs:documentation xml:lang="de">true: Kalb wurde kastriert Standardwert = false</xs:documentation></xs:annotation></xs:element>
+<xs:element name="IsCastrated" type="xs:boolean"><xs:annotation><xs:documentation xml:lang="de">true: Tier wurde kastriert Standardwert = false</xs:documentation></xs:annotation></xs:element>
 <xs:element name="WithersClass" type="eCH-0261:enumeratedItemType"><xs:annotation><xs:documentation xml:lang="de">Widerristhoehe</xs:documentation></xs:annotation></xs:element>
 <xs:element name="ColorFreeText" type="xs:string"><xs:annotation><xs:documentation xml:lang="de">Farbe des Equiden</xs:documentation></xs:annotation></xs:element>
 <xs:element name="RaceColor" type="eCH-0261:enumeratedItemType"><xs:annotation><xs:documentation xml:lang="de">Rassenfarbe</xs:documentation></xs:annotation></xs:element>
@@ -55,8 +55,8 @@
 <xs:element name="AgateNumber" type="eCH-0261:identifierType"><xs:annotation><xs:documentation xml:lang="de">AgateNumer der Person, welche die Chipnummer gemeldet hat.</xs:documentation></xs:annotation></xs:element>
 <xs:element name="AdditionalProperties" type="xs:string"><xs:annotation><xs:documentation xml:lang="de">Liste von zusaetzlichen Attributen zu den Tieren. Moegliche Keys sind in der WSDL des eTransit Webservices definiert: PigAdditionalPropertyDescriptions</xs:documentation></xs:annotation></xs:element>
 </xs:all></xs:complexType><xs:complexType name= "Merkblatt_Tiererhebung"><xs:annotation><xs:documentation xml:lang="de">BLA</xs:documentation><xs:documentation xml:lang="en">BLA</xs:documentation></xs:annotation><xs:all><xs:element name="tierCodeListe" type="eCH-0261:enumeratedItemType"><xs:annotation><xs:documentation xml:lang="de">BFS: Meldung gemaess EUROSTAT_CODE</xs:documentation></xs:annotation></xs:element>
-<xs:element name="is_sucking" type="xs:boolean"><xs:annotation><xs:documentation xml:lang="de">saugt das jungtier?</xs:documentation></xs:annotation></xs:element>
-<xs:element name="is_lactating" type="xs:boolean"><xs:annotation><xs:documentation xml:lang="de">saeugt das muttertier?</xs:documentation></xs:annotation></xs:element>
+<xs:element name="isSucking" type="xs:boolean"><xs:annotation><xs:documentation xml:lang="de">saugt das jungtier?</xs:documentation></xs:annotation></xs:element>
+<xs:element name="isLactating" type="xs:boolean"><xs:annotation><xs:documentation xml:lang="de">saeugt das muttertier?</xs:documentation></xs:annotation></xs:element>
 </xs:all></xs:complexType><xs:complexType name= "Nutzungsart"><xs:annotation><xs:documentation xml:lang="de">BLA</xs:documentation><xs:documentation xml:lang="en">BLA</xs:documentation></xs:annotation><xs:all><xs:element name="TypeOfUseDate" type="xs:dateTime"><xs:annotation><xs:documentation xml:lang="de">Datum der Nutzungsartaenderung</xs:documentation></xs:annotation></xs:element>
 <xs:element name="TypeOfUse" type="eCH-0261:enumeratedItemType"><xs:annotation><xs:documentation xml:lang="de">Nutzungsart</xs:documentation></xs:annotation></xs:element>
 <xs:element name="PigCategory" type="eCH-0261:enumeratedItemType"><xs:annotation><xs:documentation xml:lang="de">Schweinekategorie</xs:documentation></xs:annotation></xs:element>

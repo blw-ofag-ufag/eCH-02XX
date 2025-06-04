@@ -16,13 +16,13 @@ Grunddaten;HasWhiteOnLegFrontRig ht;HasWhiteOnLegFrontRig ht;Boolean;1;Hat weiss
 Grunddaten;RaceColor;RaceColor;xs:int;1;Rassenfarbe;x;x;;;;;;Int? Bool(Ja/Nein?)  oder enum/code?;eCH-0261:enumeratedItemType
 Grunddaten;ColorFreeText;ColorFreeText;String;0..1 N;Farbe des Equiden;x;;;;;;;;xs:string
 Grunddaten;WithersClass;WithersClass;TranslatedEnumTyp eOfEnumEquidWith ersClass;0..1 N;Widerristhoehe;x;;;;;;;;eCH-0261:enumeratedItemType
-Grunddaten;IsCastrated;IsCastrated;boolean;1 N;true: Kalb wurde kastriert Standardwert = false;;x;;;;;;;xs:boolean
+Grunddaten;IsCastrated;IsCastrated;boolean;1 N;true: Tier wurde kastriert Standardwert = false;;x;;;;;;;xs:boolean
 Grunddaten;Gender;sex;string;0..1 N;Geschlecht;x;x;;x;x;;;String? -> male/female. gibt es anderes relevantes Geschlecht?;eCH-0261:enumeratedItemType
 Grunddaten;SportBreedingName;SportBreedingName;string;1 N;Sport- oder Zuchtname;x;;;;;;;;xs:string
 Grunddaten;DeathBirthTime;DeathTime;xs:int;1;Zeitpunkt des Todes;;x;;;;;;geaendert von DeathBirthTime zu DeathTime. Oder soll hier auf eine Totgeburt hingewiesen werden? unnoetig: birthTime und deathTime als xs:dateTime koennen auch identisch sein. Oder ist es relevant anzugeben, dass ein embryo x-tage vor Geburt verstorben ist? ausserdem gibt es stillbirth;xs:dateTime
 Grunddaten;birthWeight. BirthWeight. slaughterWeight;weight;;0;Gewichtsmessung in Kg;;;;;;;;;xs:decimal
 Grunddaten;PlaceOfBirth;PlaceOfBirth;String;1 N;Geburtsort;x;;;;;;;string? Sind die Geburtsorte in der Schweiz: enum (z.B. bfs-nr fuer gemeinde-Ebene eCH-0007:municipalityIdType oder BUR) ?;xs:string
-Grunddaten;BirthNotificationData;;;1;;;x;;x;x;;;string?;xs:string
+Grunddaten;BirthNotificationData;BirthNotificationData;;1;unbekannt;;x;;x;x;;;string?;xs:string
 Grunddaten;BirthWeight. BirthWeight (Goat: xs:decimal);BirthWeight;xs:int;1 N;Geburtsgewicht in kg;;x;;;;;;streichen;xs:decimal
 Grunddaten;BirthDate;BirthDate;TimeDate;0..1 N;Geburtsdatum;x;x;;x;x;;;;xs:dateTime
 Grunddaten;Breed;Breed;String;0..1 N;Rasse;x;x;;x;x;;;gibt es keine enum fuer Pferde (urspruenglich string...)?;eCH-0261:enumeratedItemType
@@ -94,6 +94,6 @@ MELDER;AdditionalProperties;AdditionalProperties;AdditionalPropertyD ata;0..n;Li
 MELDER;AgateNumber;AgateNumber;String;1 N;AgateNumer der Person, welche die Chipnummer gemeldet hat.;x;;;;;;;;eCH-0261:identifierType
 MELDER;FirstName;FirstName;String;1 N;Vorname der Person, welche die Chipnummer gemeldet hat.;x;;;;;;;notwendig wenn ID mit Agate-Nr moeglich?;xs:string
 MELDER;LastName;LastName;String;1 N;Nachname der Person, welche die Chipnummer gemeldet hat.;x;;;;;;;notwendig wenn ID mit Agate-Nr moeglich?;xs:string
-Merkblatt_Tiererhebung;;is_lactating;;;saeugt das muttertier?;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;is_saeugend;xs:boolean
-Merkblatt_Tiererhebung;;is_sucking;;;saugt das jungtier?;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;is_saugend;xs:boolean
+Merkblatt_Tiererhebung;;isLactating;;;saeugt das muttertier?;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;is_saeugend;xs:boolean
+Merkblatt_Tiererhebung;;isSucking;;;saugt das jungtier?;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;is_saugend;xs:boolean
 Merkblatt_Tiererhebung;;tierCodeListe;eCH-0261:enumeratedItemType;;BFS: Meldung gemaess EUROSTAT_CODE;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;BFS: Meldung gemaess EUROSTAT_CODE;eCH-0261:enumeratedItemType
