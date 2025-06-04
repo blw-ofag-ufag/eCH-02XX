@@ -73,7 +73,7 @@ def main():
             for col, val in df[::-1].iterrows():
 
                 if u == val["Thema"]:
-                    text = f'<xs:element name="{val["Element"]}" type="{val["vorschlag_Datentyp"]}"><xs:annotation><xs:documentation xml:lang="de">{val["Beschreibung"]}</xs:documentation></xs:annotation></xs:element>\n'
+                    text = f'<xs:element name="{val["element"]}" type="{val["proposedDatatype"]}"><xs:annotation><xs:documentation xml:lang="de">{val["Beschreibung"]}</xs:documentation></xs:annotation></xs:element>\n'
                     f.write(text)
 
                 else:

@@ -1,4 +1,4 @@
-Theme;SimilarElement;Element;Datentyp;Kardinalitaet;Beschreibung;Equid;Cattle;Pig;Sheep ;Goat;Poultry;beschreibung_thema;Pascal_Bemerkung;vorschlag_Datentyp
+theme;SimilarElement;element;Datentyp;Kardinalitaet;Beschreibung;Equid;Cattle;Pig;Sheep ;Goat;Poultry;beschreibung_thema;Pascal_Bemerkung;proposedDatatype
 stayData;NotificationState;notificationState;TranslatedEnumTyp eOfEnumEquidNotif icationState;0..1 N;Status Fehlende Meldung des Equiden.;x;;;;;;;;eCH-0261:enumeratedItemType
 stayData;PendulumHusbandry;pendulumHusbandry;xs:int;1 N;Pendeltierhaltung;;x;;;;;;Int? Anzahl der Pendeltierhaltungen? Ja/Nein? enum?;xs:int
 stayData;AllYearHusbandry;allYearHusbandry;xs:int;1 N;Aktuelle Ganzjahrestierhaltung;;x;;x;x;;;Int? Bool(Ja/Nein?)  oder enum/code?;xs:boolean
