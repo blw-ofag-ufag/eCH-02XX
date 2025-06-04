@@ -1,101 +1,99 @@
-Thema;SimilarElement;Element;Datentyp;Kardinalitaet;Beschreibung;Equid;Cattle;Pig;Sheep ;Goat;Poultry;beschreibung_thema;Pascal_Bemerkung;vorschlag_Datentyp;;;;;;;
-Aufenthalt;NotificationState;NotificationState;TranslatedEnumTyp eOfEnumEquidNotif icationState;0..1 N;Status Fehlende Meldung des Equiden.;x;;;;;;;;eCH-0261:enumeratedItemType;;;;;;;
-Aufenthalt;PendulumHusbandry;PendulumHusbandry;xs:int;1 N;Pendeltierhaltung;;x;;;;;;Int? Anzahl der Pendeltierhaltungen? Ja/Nein? enum?;xs:int;;;;;;;
-Aufenthalt;AllYearHusbandry;AllYearHusbandry;xs:int;1 N;Aktuelle Ganzjahrestierhaltung;;x;;x;x;;;Int? Bool(Ja/Nein?)  oder enum/code?;xs:boolean;;;;;;;
-Aufenthalt;LeavingDate;LeavingDate;TimeDate;0..1 N;Abgangdatum auf abgefragtem Betrieb;x;;;;;;;;xs:dateTime;;;;;;;
-Aufenthalt;OriginTVDNumber;OriginTVDNumber;Int;0..1 N;TVD-Nummer des Herkunftsbetriebs;x;;;;;;;eCH-0261:identifierType;eCH-0261:identifierType;;;;;;;
-Aufenthalt;ArrivalDate;ArrivalDate;TimeDate;0..1 N;Zugangsdatum auf abgefragten Betrieb;x;;;;;;;;xs:dateTime;;;;;;;
-Aufenthalt;Husbandry;Husbandry;HusbandryResult;0..1 N;Angaben zum aktuellen Standort;x;;;;;;;UID? String? enum?;xs:string;;;;;;;
-Aufenthalt;CurrentHusbandry;CurrentHusbandry;xs:int;1 N;Aktuelle Tierhaltung;;x;;x;x;;;Int? Bool(Ja/Nein?)  oder enum/code?;eCH-0261:enumeratedItemType;;;;;;;
-Aufenthalt;HistoryState. GoatHistoryState;CattleHistoryState;xs:int;1;Befund der Tiergeschichte;;x;;;x;;;Int? Bool(Ja/Nein?)  oder enum/code?;eCH-0261:enumeratedItemType;;;;;;;
-Grunddaten;HasWhiteOnHead;HasWhiteOnHead;Boolean;1;Hat weisse Abzeichen am Kopf;x;;;;;;;;xs:boolean;;;;;;;
-Grunddaten;HasWhiteOnLegBackLeft;HasWhiteOnLegBackLeft;Boolean;1;Hat weisse Abzeichen am hinteren linken Bein;x;;;;;;;;xs:boolean;;;;;;;
-Grunddaten;HasWhiteOnLegBackRig ht;HasWhiteOnLegBackRig ht;Boolean;1;Hat weisse Abzeichen am hinteren rechten Bein;x;;;;;;;;xs:boolean;;;;;;;
-Grunddaten;HasWhiteOnLegFrontLeft;HasWhiteOnLegFrontLeft;Boolean;1;Hat weisse Abzeichen am vorderen linken Bein;x;;;;;;;;xs:boolean;;;;;;;
-Grunddaten;HasWhiteOnLegFrontRig ht;HasWhiteOnLegFrontRig ht;Boolean;1;Hat weisse Abzeichen am vorderen rechten Bein;x;;;;;;;;xs:boolean;;;;;;;
-Grunddaten;RaceColor;RaceColor;xs:int;1;Rassenfarbe;x;x;;;;;;Int? Bool(Ja/Nein?)  oder enum/code?;eCH-0261:enumeratedItemType;;;;;;;
-Grunddaten;ColorFreeText;ColorFreeText;String;0..1 N;Farbe des Equiden;x;;;;;;;;xs:string;;;;;;;
-Grunddaten;WithersClass;WithersClass;TranslatedEnumTyp eOfEnumEquidWith ersClass;0..1 N;Widerristhoehe;x;;;;;;;;eCH-0261:enumeratedItemType;;;;;;;
-Grunddaten;IsCastrated;IsCastrated;boolean;1 N;true: Kalb wurde kastriert Standardwert = false;;x;;;;;;;xs:boolean;;;;;;;
-Grunddaten;Gender;sex;string;0..1 N;Geschlecht;x;x;;x;x;;;String? -> male/female. gibt es anderes relevantes Geschlecht?;eCH-0261:enumeratedItemType;;;;;;;
-Grunddaten;SportBreedingName;SportBreedingName;string;1 N;Sport- oder Zuchtname;x;;;;;;;;xs:string;;;;;;;
-Grunddaten;DeathBirthTime;DeathTime;xs:int;1;Zeitpunkt des Todes;;x;;;;;;geaendert von DeathBirthTime zu DeathTime. Oder soll hier auf eine Totgeburt hingewiesen werden? unnoetig: birthTime und deathTime als xs:dateTime koennen auch identisch sein. Oder ist es relevant anzugeben, dass ein embryo x-tage vor Geburt verstorben ist? ausserdem gibt es stillbirth;xs:dateTime;;;;;;;
-Grunddaten;birthWeight. BirthWeight. slaughterWeight;weight;;0;Gewichtsmessung in Kg;;;;;;;;;xs:decimal;;;;;;;
-Grunddaten;PlaceOfBirth;PlaceOfBirth;String;1 N;Geburtsort;x;;;;;;;string? Sind die Geburtsorte in der Schweiz: enum (z.B. bfs-nr fuer gemeinde-Ebene eCH-0007:municipalityIdType oder BUR) ?;xs:string;;;;;;;
-Grunddaten;BirthNotificationData;;;1;;;x;;x;x;;;string?;xs:string;;;;;;;
-Grunddaten;BirthWeight. BirthWeight (Goat: xs:decimal);BirthWeight;xs:int;1 N;Geburtsgewicht in kg;;x;;;;;;streichen;xs:decimal;;;;;;;
-Grunddaten;BirthDate;BirthDate;TimeDate;0..1 N;Geburtsdatum;x;x;;x;x;;;;xs:dateTime;;;;;;;
-Grunddaten;Breed;Breed;String;0..1 N;Rasse;x;x;;x;x;;;gibt es keine enum fuer Pferde (urspruenglich string...)?;eCH-0261:enumeratedItemType;;;;;;;
-Grunddaten;Gattung;genus;enum;;Gattung;;;;;;;;zusaetzlich eingefuegt. da equidSpecies die Beschreibung Gattung hatte...;;;;;;;;
-Grunddaten;EquidSpecies;species;TranslatedEnumTyp eOfEnumEquidSpe cies;1 N;Spezies / Art;x;;;;;;;;eCH-0261:enumeratedItemType;;;;;;;
-Grunddaten;ChipNumber;ChipNumber;String;1 N;Chipnummer;x;;;;;;;eCH-0261:identifierType -> inkl quellsystem;eCH-0261:identifierType;;;;;;;
-Grunddaten;Name;Name;String;0..1 N;Name des Equiden, Kalb, Ziege;x;x;;x;x;;;;xs:string;;;;;;;
-Gruppenmeldung;AllowSeveralNotifications;AllowSeveralNotifications;boolean;1;Mehrere Einstallungen pro Tag erlauben;;;;;;x;;ist dies ein Attribut eines Nutztieres? Scheint mir eher eine Anwendungsfrage zu sein oder allenfalls eine rechtliche (muesste dann erlaubt sein);xs:boolean;;;;;;;
-Gruppenmeldung;Amount;Amount;short;1;Anzahl Schweine (1 bis 999)/ Anzahl Tiere;;;x;;;x;;int? oder xs:short? ;xs:int;;;;;;;
-Gruppenmeldung;HerdenIdentificationNumber;HerdenIdentificationNumb er;String;�;Herdenidentifikation;;;;;;x;;identifyerType;eCH-0261:identifierType;;;;;;;
-Gruppenmeldung;notificationDate;notificationDate;xs:dateTime;;Meldedatum;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;xs:dateTime;;;;;;;
-Gruppenmeldung;Notifier;Notifier;eCH-0261:identifierType;;TVD Nummer der meldenden Tierhaltung;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung kann BUR verwendet werden?;eCH-0261:identifierType;;;;;;;
-Gruppenmeldung;LeavingDate;LeavingDate;xs:dateTime;1 N;Abgangsdatum;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;xs:dateTime;;;;;;;
-Gruppenmeldung;LeavingNotificationDate;LeavingNotificationDate;xs:dateTime;1 N;Meldedatum des Abgangs;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;xs:dateTime;;;;;;;
-Gruppenmeldung;TVDNumberOrigin;TVDNumberOrigin;eCH-0261:identifierType;;TVD Nummer der Herkunftstierhaltung;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;eCH-0261:identifierType;;;;;;;
-Gruppenmeldung;eventDate;eventDate;xs:dateTime;;Ereignisdatum;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;xs:dateTime;;;;;;;
-Gruppenmeldung;countryOrigin;countryOrigin;eCH-0261:enumeratedItemType;;Herkunftsland, z.B. DE (nur bei Import, sonst nil);;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;eCH-0261:enumeratedItemType;;;;;;;
-Gruppenmeldung;ArrivalNotificationType;ArrivalNotificationType;eCH-0261:identifierType;;Meldungstyp der Zugangsmeldung Moegliche Werte: siehe GetCodes;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;eCH-0261:identifierType;;;;;;;
-Gruppenmeldung;ArrivalNotificationDate;ArrivalNotificationDate;xs:string;;Meldedatum des Zugangs;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;xs:string;;;;;;;
-Gruppenmeldung;TVDNumberStay;TVDNumberStay;eCH-0261:identifierType;;TVD Nummer der Aufenthaltstierhaltung;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;eCH-0261:identifierType;;;;;;;
-Identifikation;EarTagNumber;EarTagNumber;String;;Ohrmarkennummer;;x;;x;x;;;identifyerType;eCH-0261:identifierType;;;;;;;
-Identifikation;Identification;Identification;string;1;Ohrmarkennummer Schaf;;;;x;;;;streichen;eCH-0261:identifierType;;;;;;;
-Identifikation;Identification;Identification;string;1;Identifikation der Gruppe, muss innerhalb des Begleitdokumentes eindeutig sein;;;x;;;;;streichen?;eCH-0261:identifierType;;;;;;;
-Identifikation;ImplementationDateTime;ImplementationDateTime;DateTime;1;Implantierungsdatum;x;;;;;;;;xs:dateTime;;;;;;;
-Identifikation;ImplementationsLocation;ImplementationsLocation;String;1 N;Ort (PLZ Ort) an dem ein Equide gechippt worden ist.;x;;;;;;;PLZ? im standard sonst verwendet:;eCH-0007:municipalityIdType;;;;;;;
-Identifikation;IsPassportDesired;IsPassportDesired;boolean;1 N;true: Ausweis erwuenscht Standardwert: false;;x;;;x;;;??;xs:boolean;;;;;;;
-Identifikation;IsPassPresent;IsPassPresent;Boolean;0..1;Ist fuer Equid ein Pass ausgestellt.;x;;;;;;;;xs:boolean;;;;;;;
-Identifikation;UELN;UELN;String;0..1 N;Fuehrende UELN des Equiden;x;;;;;;;identifyerType;eCH-0261:identifierType;;;;;;;
-Krankheit;BtState;BtState;string;N;Bluetongue Status;;x;;;;;;str, bool oder enum?;eCH-0261:enumeratedItemType;;;;;;;
-Krankheit;BvdState;BvdState;string;1 N;BVD Status;;x;;;;;;str, bool oder enum?;eCH-0261:enumeratedItemType;;;;;;;
-Nutzungsart;PigCategory;PigCategory;TranslatedEnumTyp eOfEnumPigCatego ry;0 1;Schweinekategorie;;;x;;;;;enum;eCH-0261:enumeratedItemType;;;;;;;
-Nutzungsart;TypeOfUse;TypeOfUse;xs:int;1 N;Nutzungsart;x;x;;;x;x;;enum;eCH-0261:enumeratedItemType;;;;;;;
-Nutzungsart;TypeOfUseDate;TypeOfUseDate;datetime;1 N;Datum der Nutzungsartaenderung;;x;;;;;;;xs:dateTime;;;;;;;
-Owner;OwnerAgateNumber;OwnerAgateNumber;String;0..1 N;Aktueller Eigentuemer;x;;;;;;;identifyerType;eCH-0261:identifierType;;;;;;;
-Owner;OwnerFirstName;OwnerFirstName;String;0..1 N;Vorname aktueller Eigentuemer;x;;;;;;;benoetigt, wenn AgateNr?;xs:string;;;;;;;
-Owner;OwnerLastName;OwnerLastName;String;0..1 N;Nachname aktueller Eigentuemer;x;;;;;;;benoetigt, wenn AgateNr?;xs:string;;;;;;;
-Pedigree;BoolHasSGvalidatedFather;BoolHasSGvalidatedFather;boolean;1 N;true: Der Vater ist durch Swissgenetics validiert;;x;;;;;;;xs:boolean;;;;;;;
-Pedigree;EartagNumberFather;FatherEartagNumer;string;1 N;Ohrmarkennummer des Vaters;;x;;x;x;;;identifyerType;xs:string;;;;;;;
-Pedigree;EarTagNumberGeneticMother;EarTagNumberGeneticMother;string;1 N;Ohrmarkennummer der genetischen Mutter im Format Format;;x;;;;;;identifyerType;xs:string;;;;;;;
-Pedigree;EarTagNumberMother;EarTagNumberMother;string;1;Ohrmarkennummer der Mutter im Format �CH123456789012� oder;;x;;;;;;identifyerType;xs:string;;;;;;;
-Pedigree;EartagNumberMother;MotherEartagNumber;string;1 N;Ohrmarkennummer der Mutter;;x;;x;x;;;identifyerType;xs:string;;;;;;;
-Pedigree;FatherBreed;FatherBreed;EnumerationValue;1 N;Ziegenrasse des Vaters;;x;;x;x;;;ersetzbar mit FatherBreed enumeratedItem hat validity. identifierType hat sourceSystem...;eCH-0261:enumeratedItemType;;;;;;;
-Pedigree;MotherBreed;MotherBreed;EnumerationValue;1 N;Ziegenrasse der Mutter;;x;;x;x;;;ersetzbar mit MotherBreed;eCH-0261:enumeratedItemType;;;;;;;
-Pedigree;NameFather;FatherName;string;1 N;Name des Vaters;;x;;x;x;;;Wieso nicht wie Mutter mit UELN tracken?;xs:string;;;;;;;
-Pedigree;NameMother;MotherName;string;1 N;Name der Mutter;;x;;x;x;;;MotherName identisch zu NameMother?;xs:string;;;;;;;
-Pedigree;RaceColorFather;RaceColorFather;xs:int;1 N;Rassenfarbe des Vaters;;x;;;;;;Enum-Code.;eCH-0261:enumeratedItemType;;;;;;;
-Pedigree;RaceColorMother;RaceColorMother;xs:int;1;Rassenfarbe der Mutter;;x;;;;;;Enum-Code.;eCH-0261:enumeratedItemType;;;;;;;
-Pedigree;UelnGeneticMother;UelnGeneticMother;String;1 N;UELN der genetischen Mutter;x;;;;;;;identifyerType;eCH-0261:identifierType;;;;;;;
-Pedigree;UelnMother;UelnMother;String;1 N;UELN der Mutter;x;;;;;;;identifyerType;eCH-0261:identifierType;;;;;;;
-Reproduktion;BirthProcess;BirthProcess;xs:int;1 N;Geburtsablauf;;x;;;;;;Enum-Code.;xs:int;;;;;;;
-Reproduktion;Deformations;Deformations;IntArray;1 N;Missbildungen;;x;;;;;;Anzahl Missbildungen? Enum-Code? Boolean? Da xsd kein array abbilden kann: xs:string?;xs:string;;;;;;;
-Reproduktion;FirstCalvingDate. FirstKiddingDate. FirstLambingDate;firstOffspring;datetime;1 N;Datum der Erstabkalbung oder;;x;;x;x;;;ersetzbar mit firstOffspring?;xs:dateTime;;;;;;;
-Reproduktion;InseminationDate;InseminationDate;datetime;1 N;Datum der KB/Belegung/Embryotransfer;;x;;;;;;;xs:dateTime;;;;;;;
-Reproduktion;IsMultipleBirth;IsMultipleBirth;boolean;1 N;true = Mehrlingsgeburt Standardwert = false;;x;;;;;;;xs:boolean;;;;;;;
-Reproduktion;IsStillbirth;IsStillbirth;boolean;1 N;Totgeburt: true = ja, false = nein;;;;x;x;;;;xs:boolean;;;;;;;
-Reproduktion;LastCalvingDate. lastKiddingDate. LastLambingDate;LastCalvingDate;dateTime;1 N;Letztes Abkalbedatum;;x;;;;;;ersetzbar mit latestOffspring?;xs:dateTime;;;;;;;
-Schlachtung;Beefiness;Beefiness;string;0 N;Fleischigkeit;;x;x;x;x;;;;xs:string;;;;;;;
-Schlachtung;FatTissue;FatTissue;string;1 N;Fettgewebe (nil bei lebenden Tieren);;x;x;x;x;;;;xs:string;;;;;;;
-Schlachtung;HasDisposalFee;HasDisposalFee;boolean;1;Hat Entsorgungsbeitrag?;x;;;;;;;;xs:boolean;;;;;;;
-Schlachtung;IsDeceased;IsDeceased;boolean;1;true: Verendung am Schlachthof ,false: Gewerbliche Schlachtung;;x;;x;x;;;irrefuehrender Name. slaughteredAtAbbatoir;xs:boolean;;;;;;;
-Schlachtung;LValue;LValue;decimal;1 N;L-Wert;;x;;;;;;;xs:decimal;;;;;;;
-Schlachtung;MFA;MFA;xs:int;0 N;MFA-Wert in Promille (0 bis 1000);;x;x;x;x;;;;xs:int;;;;;;;
-Schlachtung;SlaughterCategory;SlaughterCategory;string;1 N;Schlachtkategorie (nil bei lebenden;;x;;;;;;enum?;xs:string;;;;;;;
-Schlachtung;SlaughterDate;SlaughterDate;datetime;1;Schlachtdatum;x;;;;;;;noetig, wenn deathTime und slaughteredAtAbbatoir? soll schlachtgewicht und lebendgewicht unterschieden werden? letzteres nicht aufgefuehrt. definiert Messung am Todeszeitpunkt und Im Schlachthaus genuegend?;xs:dateTime;;;;;;;
-Schlachtung;WeightInGrams;SlaughterWeightInGrams;xs:int;1 N;Schlachtgewicht in Gramm;;x;;x;;;;in kilo (gemaess Units...) aber 3nachkommestellen.;xs:decimal;;;;;;;
-Zucht;BreedingOrganisation;SheepBreedingOrganisation;xs:int;1 N;Bei der Geburtsmeldung angegebene Zuchtorganisation gemaess GetCodes;;x;;x;x;;;ersetzbar mit BreedingOrganisation?;eCH-0261:identifierType;;;;;;;
-Zucht;HerdBookNumber;HerdBookNumber;String;1 N;Herdebuchnummer;x;;;;;;;identifierType;eCH-0261:identifierType;;;;;;;
-Zucht;MembershipOrganisation AgateNumber;MembershipOrganisation AgateNumber;String;1 N;Agate-Nr. der Mitgliedschaftsorganisation, bei der der Equide Mitglied ist.;x;;;;;;;identifierType;eCH-0261:identifierType;;;;;;;
-Zucht;MembershipOrganisation Name;MembershipOrganisation Name;String;1 N;Name Mitgliedschaftsorganisation, bei der der Equide Mitglied ist.;x;;;;;;;notwendig wenn ID mit Agate-Nr moeglich?;xs:string;;;;;;;
-MELDER;AdditionalProperties;AdditionalProperties;AdditionalPropertyD ata;0..n;Liste von zusaetzlichen Attributen zu den Tieren. Moegliche Keys sind in der WSDL des eTransit Webservices definiert: PigAdditionalPropertyDescriptions;;;;;;;;;xs:string;;;;;;;
-MELDER;AgateNumber;AgateNumber;String;1 N;AgateNumer der Person, welche die Chipnummer gemeldet hat.;x;;;;;;;;eCH-0261:identifierType;;;;;;;
-MELDER;FirstName;FirstName;String;1 N;Vorname der Person, welche die Chipnummer gemeldet hat.;x;;;;;;;notwendig wenn ID mit Agate-Nr moeglich?;xs:string;;;;;;;
-MELDER;LastName;LastName;String;1 N;Nachname der Person, welche die Chipnummer gemeldet hat.;x;;;;;;;notwendig wenn ID mit Agate-Nr moeglich?;xs:string;;;;;;;
-Merkblatt_Tiererhebung;;is_lactating;;;saeugt das muttertier?;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;is_saeugend;xs:boolean;;;;;;;
-Merkblatt_Tiererhebung;;is_sucking;;;saugt das jungtier?;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;is_saugend;xs:boolean;;;;;;;
-Merkblatt_Tiererhebung;;tierCodeListe;eCH-0261:enumeratedItemType;;BFS: Meldung gemaess EUROSTAT_CODE;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;BFS: Meldung gemaess EUROSTAT_CODE;eCH-0261:enumeratedItemType;;;;;;;
+Thema;SimilarElement;Element;Datentyp;Kardinalitaet;Beschreibung;Equid;Cattle;Pig;Sheep ;Goat;Poultry;beschreibung_thema;Pascal_Bemerkung;vorschlag_Datentyp
+Aufenthalt;NotificationState;NotificationState;TranslatedEnumTyp eOfEnumEquidNotif icationState;0..1 N;Status Fehlende Meldung des Equiden.;x;;;;;;;;eCH-0261:enumeratedItemType
+Aufenthalt;PendulumHusbandry;PendulumHusbandry;xs:int;1 N;Pendeltierhaltung;;x;;;;;;Int? Anzahl der Pendeltierhaltungen? Ja/Nein? enum?;xs:int
+Aufenthalt;AllYearHusbandry;AllYearHusbandry;xs:int;1 N;Aktuelle Ganzjahrestierhaltung;;x;;x;x;;;Int? Bool(Ja/Nein?)  oder enum/code?;xs:boolean
+Aufenthalt;LeavingDate;LeavingDate;TimeDate;0..1 N;Abgangdatum auf abgefragtem Betrieb;x;;;;;;;;xs:dateTime
+Aufenthalt;OriginTVDNumber;OriginTVDNumber;Int;0..1 N;TVD-Nummer des Herkunftsbetriebs;x;;;;;;;eCH-0261:identifierType;eCH-0261:identifierType
+Aufenthalt;ArrivalDate;ArrivalDate;TimeDate;0..1 N;Zugangsdatum auf abgefragten Betrieb;x;;;;;;;;xs:dateTime
+Aufenthalt;Husbandry;Husbandry;HusbandryResult;0..1 N;Angaben zum aktuellen Standort;x;;;;;;;UID? String? enum?;xs:string
+Aufenthalt;CurrentHusbandry;CurrentHusbandry;xs:int;1 N;Aktuelle Tierhaltung;;x;;x;x;;;Int? Bool(Ja/Nein?)  oder enum/code?;eCH-0261:enumeratedItemType
+Aufenthalt;HistoryState. GoatHistoryState;CattleHistoryState;xs:int;1;Befund der Tiergeschichte;;x;;;x;;;Int? Bool(Ja/Nein?)  oder enum/code?;eCH-0261:enumeratedItemType
+Grunddaten;HasWhiteOnHead;HasWhiteOnHead;Boolean;1;Hat weisse Abzeichen am Kopf;x;;;;;;;;xs:boolean
+Grunddaten;HasWhiteOnLegBackLeft;HasWhiteOnLegBackLeft;Boolean;1;Hat weisse Abzeichen am hinteren linken Bein;x;;;;;;;;xs:boolean
+Grunddaten;HasWhiteOnLegBackRig ht;HasWhiteOnLegBackRig ht;Boolean;1;Hat weisse Abzeichen am hinteren rechten Bein;x;;;;;;;;xs:boolean
+Grunddaten;HasWhiteOnLegFrontLeft;HasWhiteOnLegFrontLeft;Boolean;1;Hat weisse Abzeichen am vorderen linken Bein;x;;;;;;;;xs:boolean
+Grunddaten;HasWhiteOnLegFrontRig ht;HasWhiteOnLegFrontRig ht;Boolean;1;Hat weisse Abzeichen am vorderen rechten Bein;x;;;;;;;;xs:boolean
+Grunddaten;RaceColor;RaceColor;xs:int;1;Rassenfarbe;x;x;;;;;;Int? Bool(Ja/Nein?)  oder enum/code?;eCH-0261:enumeratedItemType
+Grunddaten;ColorFreeText;ColorFreeText;String;0..1 N;Farbe des Equiden;x;;;;;;;;xs:string
+Grunddaten;WithersClass;WithersClass;TranslatedEnumTyp eOfEnumEquidWith ersClass;0..1 N;Widerristhoehe;x;;;;;;;;eCH-0261:enumeratedItemType
+Grunddaten;IsCastrated;IsCastrated;boolean;1 N;true: Kalb wurde kastriert Standardwert = false;;x;;;;;;;xs:boolean
+Grunddaten;Gender;sex;string;0..1 N;Geschlecht;x;x;;x;x;;;String? -> male/female. gibt es anderes relevantes Geschlecht?;eCH-0261:enumeratedItemType
+Grunddaten;SportBreedingName;SportBreedingName;string;1 N;Sport- oder Zuchtname;x;;;;;;;;xs:string
+Grunddaten;DeathBirthTime;DeathTime;xs:int;1;Zeitpunkt des Todes;;x;;;;;;geaendert von DeathBirthTime zu DeathTime. Oder soll hier auf eine Totgeburt hingewiesen werden? unnoetig: birthTime und deathTime als xs:dateTime koennen auch identisch sein. Oder ist es relevant anzugeben, dass ein embryo x-tage vor Geburt verstorben ist? ausserdem gibt es stillbirth;xs:dateTime
+Grunddaten;birthWeight. BirthWeight. slaughterWeight;weight;;0;Gewichtsmessung in Kg;;;;;;;;;xs:decimal
+Grunddaten;PlaceOfBirth;PlaceOfBirth;String;1 N;Geburtsort;x;;;;;;;string? Sind die Geburtsorte in der Schweiz: enum (z.B. bfs-nr fuer gemeinde-Ebene eCH-0007:municipalityIdType oder BUR) ?;xs:string
+Grunddaten;BirthNotificationData;;;1;;;x;;x;x;;;string?;xs:string
+Grunddaten;BirthWeight. BirthWeight (Goat: xs:decimal);BirthWeight;xs:int;1 N;Geburtsgewicht in kg;;x;;;;;;streichen;xs:decimal
+Grunddaten;BirthDate;BirthDate;TimeDate;0..1 N;Geburtsdatum;x;x;;x;x;;;;xs:dateTime
+Grunddaten;Breed;Breed;String;0..1 N;Rasse;x;x;;x;x;;;gibt es keine enum fuer Pferde (urspruenglich string...)?;eCH-0261:enumeratedItemType
+Grunddaten;Gattung;genus;eCH-0261:enumeratedItemType;;Gattung;;;;;;;;zusaetzlich eingefuegt. da equidSpecies die Beschreibung Gattung hatte...;eCH-0261:enumeratedItemType
+Grunddaten;EquidSpecies;species;TranslatedEnumTyp eOfEnumEquidSpe cies;1 N;Spezies / Art;x;;;;;;;;eCH-0261:enumeratedItemType
+Grunddaten;ChipNumber;ChipNumber;String;1 N;Chipnummer;x;;;;;;;eCH-0261:identifierType -> inkl quellsystem;eCH-0261:identifierType
+Grunddaten;Name;Name;String;0..1 N;Name des Equiden, Kalb, Ziege;x;x;;x;x;;;;xs:string
+Gruppenmeldung;AllowSeveralNotifications;AllowSeveralNotifications;boolean;1;Mehrere Einstallungen pro Tag erlauben;;;;;;x;;ist dies ein Attribut eines Nutztieres? Scheint mir eher eine Anwendungsfrage zu sein oder allenfalls eine rechtliche (muesste dann erlaubt sein);xs:boolean
+Gruppenmeldung;Amount;Amount;short;1;Anzahl Schweine (1 bis 999)/ Anzahl Tiere;;;x;;;x;;int? oder xs:short? ;xs:int
+Gruppenmeldung;HerdenIdentificationNumber;HerdenIdentificationNumb er;String;�;Herdenidentifikation;;;;;;x;;identifyerType;eCH-0261:identifierType
+Gruppenmeldung;notificationDate;notificationDate;xs:dateTime;;Meldedatum;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;xs:dateTime
+Gruppenmeldung;Notifier;Notifier;eCH-0261:identifierType;;TVD Nummer der meldenden Tierhaltung;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung kann BUR verwendet werden?;eCH-0261:identifierType
+Gruppenmeldung;LeavingDate;LeavingDate;xs:dateTime;1 N;Abgangsdatum;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;xs:dateTime
+Gruppenmeldung;LeavingNotificationDate;LeavingNotificationDate;xs:dateTime;1 N;Meldedatum des Abgangs;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;xs:dateTime
+Gruppenmeldung;TVDNumberOrigin;TVDNumberOrigin;eCH-0261:identifierType;;TVD Nummer der Herkunftstierhaltung;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;eCH-0261:identifierType
+Gruppenmeldung;eventDate;eventDate;xs:dateTime;;Ereignisdatum;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;xs:dateTime
+Gruppenmeldung;countryOrigin;countryOrigin;eCH-0261:enumeratedItemType;;Herkunftsland, z.B. DE (nur bei Import, sonst nil);;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;eCH-0261:enumeratedItemType
+Gruppenmeldung;ArrivalNotificationType;ArrivalNotificationType;eCH-0261:identifierType;;Meldungstyp der Zugangsmeldung Moegliche Werte: siehe GetCodes;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;eCH-0261:identifierType
+Gruppenmeldung;ArrivalNotificationDate;ArrivalNotificationDate;xs:string;;Meldedatum des Zugangs;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;xs:string
+Gruppenmeldung;TVDNumberStay;TVDNumberStay;eCH-0261:identifierType;;TVD Nummer der Aufenthaltstierhaltung;;;;;;;;aus: Workshop1_31.10.24 > IST_Zustand_Abgleich > Gruppenmeldung;eCH-0261:identifierType
+Identifikation;EarTagNumber;EarTagNumber;String;;Ohrmarkennummer;;x;;x;x;;;identifyerType;eCH-0261:identifierType
+Identifikation;ImplementationDateTime;ImplementationDateTime;DateTime;1;Implantierungsdatum;x;;;;;;;;xs:dateTime
+Identifikation;ImplementationsLocation;ImplementationsLocation;String;1 N;Ort (PLZ Ort) an dem ein Equide gechippt worden ist.;x;;;;;;;PLZ? im standard sonst verwendet:;eCH-0007:municipalityIdType
+Identifikation;IsPassportDesired;IsPassportDesired;boolean;1 N;true: Ausweis erwuenscht Standardwert: false;;x;;;x;;;??;xs:boolean
+Identifikation;IsPassPresent;IsPassPresent;Boolean;0..1;Ist fuer Equid ein Pass ausgestellt.;x;;;;;;;;xs:boolean
+Identifikation;UELN;UELN;String;0..1 N;Fuehrende UELN des Equiden;x;;;;;;;identifyerType;eCH-0261:identifierType
+Krankheit;BtState;BtState;string;N;Bluetongue Status;;x;;;;;;str, bool oder enum?;eCH-0261:enumeratedItemType
+Krankheit;BvdState;BvdState;string;1 N;BVD Status;;x;;;;;;str, bool oder enum?;eCH-0261:enumeratedItemType
+Nutzungsart;PigCategory;PigCategory;TranslatedEnumTyp eOfEnumPigCatego ry;0 1;Schweinekategorie;;;x;;;;;enum;eCH-0261:enumeratedItemType
+Nutzungsart;TypeOfUse;TypeOfUse;xs:int;1 N;Nutzungsart;x;x;;;x;x;;enum;eCH-0261:enumeratedItemType
+Nutzungsart;TypeOfUseDate;TypeOfUseDate;datetime;1 N;Datum der Nutzungsartaenderung;;x;;;;;;;xs:dateTime
+Owner;OwnerAgateNumber;OwnerAgateNumber;String;0..1 N;Aktueller Eigentuemer;x;;;;;;;identifyerType;eCH-0261:identifierType
+Owner;OwnerFirstName;OwnerFirstName;String;0..1 N;Vorname aktueller Eigentuemer;x;;;;;;;benoetigt, wenn AgateNr?;xs:string
+Owner;OwnerLastName;OwnerLastName;String;0..1 N;Nachname aktueller Eigentuemer;x;;;;;;;benoetigt, wenn AgateNr?;xs:string
+Pedigree;BoolHasSGvalidatedFather;BoolHasSGvalidatedFather;boolean;1 N;true: Der Vater ist durch Swissgenetics validiert;;x;;;;;;;xs:boolean
+Pedigree;EartagNumberFather;FatherEartagNumer;string;1 N;Ohrmarkennummer des Vaters;;x;;x;x;;;identifyerType;xs:string
+Pedigree;EarTagNumberGeneticMother;EarTagNumberGeneticMother;string;1 N;Ohrmarkennummer der genetischen Mutter im Format Format;;x;;;;;;identifyerType;xs:string
+Pedigree;EarTagNumberMother;EarTagNumberMother;string;1;Ohrmarkennummer der Mutter im Format �CH123456789012� oder;;x;;;;;;identifyerType;xs:string
+Pedigree;EartagNumberMother;MotherEartagNumber;string;1 N;Ohrmarkennummer der Mutter;;x;;x;x;;;identifyerType;xs:string
+Pedigree;FatherBreed;FatherBreed;EnumerationValue;1 N;Ziegenrasse des Vaters;;x;;x;x;;;ersetzbar mit FatherBreed enumeratedItem hat validity. identifierType hat sourceSystem...;eCH-0261:enumeratedItemType
+Pedigree;MotherBreed;MotherBreed;EnumerationValue;1 N;Ziegenrasse der Mutter;;x;;x;x;;;ersetzbar mit MotherBreed;eCH-0261:enumeratedItemType
+Pedigree;NameFather;FatherName;string;1 N;Name des Vaters;;x;;x;x;;;Wieso nicht wie Mutter mit UELN tracken?;xs:string
+Pedigree;NameMother;MotherName;string;1 N;Name der Mutter;;x;;x;x;;;MotherName identisch zu NameMother?;xs:string
+Pedigree;RaceColorFather;RaceColorFather;xs:int;1 N;Rassenfarbe des Vaters;;x;;;;;;Enum-Code.;eCH-0261:enumeratedItemType
+Pedigree;RaceColorMother;RaceColorMother;xs:int;1;Rassenfarbe der Mutter;;x;;;;;;Enum-Code.;eCH-0261:enumeratedItemType
+Pedigree;UelnGeneticMother;UelnGeneticMother;String;1 N;UELN der genetischen Mutter;x;;;;;;;identifyerType;eCH-0261:identifierType
+Pedigree;UelnMother;UelnMother;String;1 N;UELN der Mutter;x;;;;;;;identifyerType;eCH-0261:identifierType
+Reproduktion;BirthProcess;BirthProcess;xs:int;1 N;Geburtsablauf;;x;;;;;;Enum-Code.;xs:int
+Reproduktion;Deformations;Deformations;IntArray;1 N;Missbildungen;;x;;;;;;Anzahl Missbildungen? Enum-Code? Boolean? Da xsd kein array abbilden kann: xs:string?;xs:string
+Reproduktion;FirstCalvingDate. FirstKiddingDate. FirstLambingDate;firstOffspring;datetime;1 N;Datum der Erstabkalbung oder;;x;;x;x;;;ersetzbar mit firstOffspring?;xs:dateTime
+Reproduktion;InseminationDate;InseminationDate;datetime;1 N;Datum der KB/Belegung/Embryotransfer;;x;;;;;;;xs:dateTime
+Reproduktion;IsMultipleBirth;IsMultipleBirth;boolean;1 N;true = Mehrlingsgeburt Standardwert = false;;x;;;;;;;xs:boolean
+Reproduktion;IsStillbirth;IsStillbirth;boolean;1 N;Totgeburt: true = ja, false = nein;;;;x;x;;;;xs:boolean
+Reproduktion;LastCalvingDate. lastKiddingDate. LastLambingDate;LastCalvingDate;dateTime;1 N;Letztes Abkalbedatum;;x;;;;;;ersetzbar mit latestOffspring?;xs:dateTime
+Schlachtung;Beefiness;Beefiness;string;0 N;Fleischigkeit;;x;x;x;x;;;;xs:string
+Schlachtung;FatTissue;FatTissue;string;1 N;Fettgewebe (nil bei lebenden Tieren);;x;x;x;x;;;;xs:string
+Schlachtung;HasDisposalFee;HasDisposalFee;boolean;1;Hat Entsorgungsbeitrag?;x;;;;;;;;xs:boolean
+Schlachtung;IsDeceased;IsDeceased;boolean;1;true: Verendung am Schlachthof ,false: Gewerbliche Schlachtung;;x;;x;x;;;irrefuehrender Name. slaughteredAtAbbatoir;xs:boolean
+Schlachtung;LValue;LValue;decimal;1 N;L-Wert;;x;;;;;;;xs:decimal
+Schlachtung;MFA;MFA;xs:int;0 N;MFA-Wert in Promille (0 bis 1000);;x;x;x;x;;;;xs:int
+Schlachtung;SlaughterCategory;SlaughterCategory;string;1 N;Schlachtkategorie (nil bei lebenden;;x;;;;;;enum?;xs:string
+Schlachtung;SlaughterDate;SlaughterDate;datetime;1;Schlachtdatum;x;;;;;;;noetig, wenn deathTime und slaughteredAtAbbatoir? soll schlachtgewicht und lebendgewicht unterschieden werden? letzteres nicht aufgefuehrt. definiert Messung am Todeszeitpunkt und Im Schlachthaus genuegend?;xs:dateTime
+Schlachtung;WeightInGrams;SlaughterWeightInGrams;xs:int;1 N;Schlachtgewicht in Gramm;;x;;x;;;;in kilo (gemaess Units...) aber 3nachkommestellen.;xs:decimal
+Zucht;BreedingOrganisation;SheepBreedingOrganisation;xs:int;1 N;Bei der Geburtsmeldung angegebene Zuchtorganisation gemaess GetCodes;;x;;x;x;;;ersetzbar mit BreedingOrganisation?;eCH-0261:identifierType
+Zucht;HerdBookNumber;HerdBookNumber;String;1 N;Herdebuchnummer;x;;;;;;;identifierType;eCH-0261:identifierType
+Zucht;MembershipOrganisation AgateNumber;MembershipOrganisation AgateNumber;String;1 N;Agate-Nr. der Mitgliedschaftsorganisation, bei der der Equide Mitglied ist.;x;;;;;;;identifierType;eCH-0261:identifierType
+Zucht;MembershipOrganisation Name;MembershipOrganisation Name;String;1 N;Name Mitgliedschaftsorganisation, bei der der Equide Mitglied ist.;x;;;;;;;notwendig wenn ID mit Agate-Nr moeglich?;xs:string
+MELDER;AdditionalProperties;AdditionalProperties;AdditionalPropertyD ata;0..n;Liste von zusaetzlichen Attributen zu den Tieren. Moegliche Keys sind in der WSDL des eTransit Webservices definiert: PigAdditionalPropertyDescriptions;;;;;;;;;xs:string
+MELDER;AgateNumber;AgateNumber;String;1 N;AgateNumer der Person, welche die Chipnummer gemeldet hat.;x;;;;;;;;eCH-0261:identifierType
+MELDER;FirstName;FirstName;String;1 N;Vorname der Person, welche die Chipnummer gemeldet hat.;x;;;;;;;notwendig wenn ID mit Agate-Nr moeglich?;xs:string
+MELDER;LastName;LastName;String;1 N;Nachname der Person, welche die Chipnummer gemeldet hat.;x;;;;;;;notwendig wenn ID mit Agate-Nr moeglich?;xs:string
+Merkblatt_Tiererhebung;;is_lactating;;;saeugt das muttertier?;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;is_saeugend;xs:boolean
+Merkblatt_Tiererhebung;;is_sucking;;;saugt das jungtier?;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;is_saugend;xs:boolean
+Merkblatt_Tiererhebung;;tierCodeListe;eCH-0261:enumeratedItemType;;BFS: Meldung gemaess EUROSTAT_CODE;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;BFS: Meldung gemaess EUROSTAT_CODE;eCH-0261:enumeratedItemType
