@@ -16,7 +16,7 @@ def main():
     """
 
     # remove empty spaces as they are now allowed in xs:element name and type
-    df['Element'] = df['Element'].str.replace(' ', '')
+    df['element'] = df['element'].str.replace(' ', '')
     df['Datentyp'] = df['Datentyp'].str.replace(' ', '')
 
     # print(df.columns)
@@ -72,7 +72,7 @@ def main():
 
             for col, val in df[::-1].iterrows():
 
-                if u == val["Thema"]:
+                if u == val["theme"]:
                     text = f'<xs:element name="{val["element"]}" type="{val["proposedDatatype"]}"><xs:annotation><xs:documentation xml:lang="de">{val["Beschreibung"]}</xs:documentation></xs:annotation></xs:element>\n'
                     f.write(text)
 
