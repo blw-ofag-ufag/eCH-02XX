@@ -97,3 +97,4 @@ MELDER;LastName;LastName;String;1 N;Nachname der Person, welche die Chipnummer g
 Merkblatt_Tiererhebung;;isLactating;;;saeugt das muttertier?;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;is_saeugend;xs:boolean
 Merkblatt_Tiererhebung;;isSucking;;;saugt das jungtier?;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;is_saugend;xs:boolean
 Merkblatt_Tiererhebung;;tierCodeListe;eCH-0261:enumeratedItemType;;BFS: Meldung gemaess EUROSTAT_CODE;;;;;;;Fuer AggregierteTierdaten: Abgeleitet aus Merkblatt_Tiererhebung;BFS: Meldung gemaess EUROSTAT_CODE;eCH-0261:enumeratedItemType
+
