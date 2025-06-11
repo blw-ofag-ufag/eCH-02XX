@@ -59,8 +59,6 @@ def main():
     unique_levels = list(reversed(list(np.unique(level_n))))
 
     # write to file.
-    # with open("eCH-02XX.xsd", "a", encoding="utf-8") as f:
-
     with open("v2_eCH-02XX.xsd", "a", encoding="utf-8") as f:
         f.write(VERSION)
         f.write(SCHEMA)
