@@ -8,10 +8,10 @@
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0108/7" schemaLocation="http://www.ech.ch/xmlns/eCH-0108/7/eCH-0108-7-0.xsd"/>
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0261/1" schemaLocation="https://www.ech.ch/sites/default/files/imce/eCH-Dossier/0241-0270/eCH-0261/1.0.0/Beilagen/eCH-0261-1-0.xsd"/>
 	<xs:import namespace="http://www.interlis.ch/geometry/1.0" schemaLocation="https://models.interlis.ch/refhb24/geometry.xsd"/>
-	<xs:complexType name="Merkblatt_Tiererhebung">
+	<xs:complexType name="leafletAnimalCensus">
 		<xs:annotation>
-			<xs:documentation xml:lang="de">BLA</xs:documentation>
-			<xs:documentation xml:lang="en">BLA</xs:documentation>
+			<xs:documentation xml:lang="Merkblatt Tiererhebung wie in der AG Nutztier der FG Agridata definiert.">BLA</xs:documentation>
+			<xs:documentation xml:lang="en">"Leaflet on Animal Census as defined by the Workinggroup Nutztier of eCH-FG Agridata."</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="tierCodeListe" type="eCH-0261:enumeratedItemType">
