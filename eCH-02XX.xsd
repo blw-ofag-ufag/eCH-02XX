@@ -90,7 +90,7 @@
 					<xs:documentation xml:lang="de">Ereignisdatum</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="TVDNumberOrigin" type="eCH-0261:identifierType">
+			<xs:element name="tvdNumberOrigin" type="eCH-0261:identifierType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">TVD Nummer der Herkunftstierhaltung</xs:documentation>
 				</xs:annotation>
@@ -384,12 +384,12 @@
 			<xs:documentation xml:lang="en">BLA</xs:documentation>
 		</xs:annotation>
 		<xs:all>
-			<xs:element name="UELNMother" type="eCH-0261:identifierType">
+			<xs:element name="uelnMother" type="eCH-0261:identifierType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">UELN der Mutter</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="UELNGeneticMother" type="eCH-0261:identifierType">
+			<xs:element name="uelnGeneticMother" type="eCH-0261:identifierType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">UELN der genetischen Mutter</xs:documentation>
 				</xs:annotation>
@@ -623,8 +623,16 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	
-	<xs:element name="NUTZTIER_Einzeltier">
+	<xs:complexType>
+		<xs:all>
+			<xs:element name="leavletAnimalSurveyRequirements" type="leavletAnimalSurveyType">
+				<xs:annotation>
+					<xs:documentation xml:lang="de">Informationen zur eindeutigen Identifizierung von Einzeltieren</xs:documentation>
+				</xs:annotation>					
+			</xs:element>
+		<xs:all>
+	</xs:complexType>
+	<xs:element name="livestock_individual">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Modellierung des Nutztiers</xs:documentation>
 		</xs:annotation>
@@ -660,20 +668,22 @@
 			<xs:element name="breeding" type="eCH-02XX:breedingData">
 			<xs:annotation><xs:documentation xml:lang="de">Informationen über den Zuchtbetrieb</xs:documentation></xs:annotation>		
 			</xs:element>
-			<xs:element name="tiererhebung" type="eCH-02XX:Merkblatt_Tiererhebung">
+			<xs:element name="leavletAnimalSurvey" type="eCH-02XX:leavletAnimalSurveyType">
 			<xs:annotation><xs:documentation xml:lang="de">Anforderung aus dem Merkblatt_Tiererhebung</xs:documentation></xs:annotation>
 			</xs:element>			
 			</xs:all>		
 		</xs:complexType>
 	</xs:element>
 	
-	<xs:element name="NUTZTIER_Tiergruppe">
+	<xs:element name="livestock_group">
+		
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Modellierung von Tiergruppen</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:all>
 			<xs:element name="members" type="eCH-02XX:groupIdentification">
+				
 			<xs:annotation><xs:documentation xml:lang="de">Liste der Individualtiere, falls bekannt</xs:documentation></xs:annotation>					
 			</xs:element>
 			<xs:element name="groupNotification" type="eCH-02XX:groupNotificationData">
@@ -700,7 +710,7 @@
 			<xs:element name="breeding" type="eCH-02XX:breedingData">
 			<xs:annotation><xs:documentation xml:lang="de">Informationen über den Zuchtbetrieb</xs:documentation></xs:annotation>		
 			</xs:element>
-			<xs:element name="tiererhebung" type="eCH-02XX:Merkblatt_Tiererhebung">
+			<xs:element name="leavletAnimalSurvey" type="eCH-02XX:leavletAnimalSurveyType">
 			<xs:annotation><xs:documentation xml:lang="de">Anforderung aus dem Merkblatt_Tiererhebung</xs:documentation></xs:annotation>
 			</xs:element>			
 			</xs:all>		
