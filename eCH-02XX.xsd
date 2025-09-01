@@ -8,13 +8,13 @@
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0108/7" schemaLocation="http://www.ech.ch/xmlns/eCH-0108/7/eCH-0108-7-0.xsd"/>
 	<xs:import namespace="http://www.ech.ch/xmlns/eCH-0261/1" schemaLocation="https://www.ech.ch/sites/default/files/imce/eCH-Dossier/0241-0270/eCH-0261/1.0.0/Beilagen/eCH-0261-1-0.xsd"/>
 	<xs:import namespace="http://www.interlis.ch/geometry/1.0" schemaLocation="https://models.interlis.ch/refhb24/geometry.xsd"/>
-	<xs:complexType name="leafletAnimalCensus">
+	<xs:complexType name="leafletAnimalCensusType">
 		<xs:annotation>
 			<xs:documentation xml:lang="Merkblatt Tiererhebung wie in der AG Nutztier der FG Agridata definiert.">BLA</xs:documentation>
 			<xs:documentation xml:lang="en">"Leaflet on Animal Census as defined by the Workinggroup Nutztier of eCH-FG Agridata."</xs:documentation>
 		</xs:annotation>
 		<xs:all>
-			<xs:element name="tierCodeListe" type="eCH-0261:enumeratedItemType">
+			<xs:element name="tierCodeList" type="eCH-0261:enumeratedItemType">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">BFS: Meldung gemaess EUROSTAT_CODE</xs:documentation>
 				</xs:annotation>
@@ -31,7 +31,7 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="breedingData">
+	<xs:complexType name="breedingDataType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">BLA</xs:documentation>
 			<xs:documentation xml:lang="en">BLA</xs:documentation>
@@ -59,7 +59,7 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="groupNotificationData">
+	<xs:complexType name="groupNotificationDataType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">BLA</xs:documentation>
 			<xs:documentation xml:lang="en">BLA</xs:documentation>
@@ -132,7 +132,7 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="healthStatus">
+	<xs:complexType name="healthStatusType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">BLA</xs:documentation>
 			<xs:documentation xml:lang="en">BLA</xs:documentation>
@@ -150,7 +150,7 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="groupIdentification">
+	<xs:complexType name="groupIdentificationType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">Identifikationsattribute für Gruppen</xs:documentation>
 		</xs:annotation>
@@ -179,7 +179,7 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="identificationData">
+	<xs:complexType name="identificationDataType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">BLA</xs:documentation>
 			<xs:documentation xml:lang="en">BLA</xs:documentation>
@@ -327,7 +327,7 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="notifierData">
+	<xs:complexType name="notifierDataType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">BLA</xs:documentation>
 			<xs:documentation xml:lang="en">BLA</xs:documentation>
@@ -355,7 +355,7 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="ownerData">
+	<xs:complexType name="ownerDataType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">BLA</xs:documentation>
 			<xs:documentation xml:lang="en">BLA</xs:documentation>
@@ -378,7 +378,7 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="pedigreeData">
+	<xs:complexType name="pedigreeDataType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">BLA</xs:documentation>
 			<xs:documentation xml:lang="en">BLA</xs:documentation>
@@ -424,7 +424,7 @@
 					<xs:documentation xml:lang="de">Ziegenrasse des Vaters</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="motherEartagNumber" type="xs:string">
+			<xs:element name="motherEarTagNumber" type="xs:string">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">Ohrmarkennummer der Mutter</xs:documentation>
 				</xs:annotation>
@@ -444,14 +444,14 @@
 					<xs:documentation xml:lang="de">Ohrmarkennummer des Vaters</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="boolHasSGValidatedFather" type="xs:boolean">
+			<xs:element name="hasSGValidatedFather" type="xs:boolean">
 				<xs:annotation>
 					<xs:documentation xml:lang="de">true: Der Vater ist durch Swissgenetics validiert</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="reproductionData">
+	<xs:complexType name="reproductionDataType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">BLA</xs:documentation>
 			<xs:documentation xml:lang="en">BLA</xs:documentation>
@@ -494,7 +494,7 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="slaughterData">
+	<xs:complexType name="slaughterDataType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">BLA</xs:documentation>
 			<xs:documentation xml:lang="en">BLA</xs:documentation>
@@ -547,7 +547,7 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="stayData">
+	<xs:complexType name="stayDataType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">BLA</xs:documentation>
 			<xs:documentation xml:lang="en">BLA</xs:documentation>
@@ -600,7 +600,7 @@
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
-	<xs:complexType name="utilisationData">
+	<xs:complexType name="utilisationDataType">
 		<xs:annotation>
 			<xs:documentation xml:lang="de">BLA</xs:documentation>
 			<xs:documentation xml:lang="en">BLA</xs:documentation>
