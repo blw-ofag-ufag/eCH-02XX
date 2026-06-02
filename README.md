@@ -1,2 +1,3 @@
 # eCH-02XX
-Repo für den neuen Nutztierstandard.
+
+Repository for the documentation and data model of eCH-02XX.
